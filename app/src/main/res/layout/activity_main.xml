@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="50dp"
+        android:background="@color/teal_200"
+        android:textSize="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_start_client"
+        android:text="连接服务器"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_start_server"></TextView>
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/tv_start_client"
+        android:layout_width="match_parent"
+        android:hint="键入要链接的手机ip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_send"
+        android:layout_height="50dp"
+        android:id="@+id/et_ip"></EditText>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/et_ip"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_send"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:id="@+id/ip"></TextView>
+
+    <TextView
+        android:id="@+id/tv_start_server"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:background="@color/teal_200"
+        android:textSize="30dp"
+        android:layout_height="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_start_client"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="启动服务器"></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/msg"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/et_msg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ip" />
+
+    <EditText
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_send"
+        android:layout_height="50dp"
+        android:id="@+id/et_msg"></EditText>
+    <TextView
+        android:text="发送"
+        android:background="@color/teal_200"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:id="@+id/tv_send"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/et_msg"></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>
